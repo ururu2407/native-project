@@ -27,13 +27,19 @@ const PostDate = styled.Text`
   color: rgba(0, 0, 0, 0.4);
   margin-top: 2px;
 `
+const truncateTitle = (title) => {
+  if(title.length >= 50) {
+    return title.substring(0, 50) + '...'
+  }
+  return title
+}
 
 export const Post = ({ title, date, image }) => {
     return (
         <PostView>
             <PostImage source={{ uri: image }} />
             <PostDetails>
-                <PostTitle>{title}</PostTitle>
+                <PostTitle>{truncateTitle(title)}</PostTitle>
                 <PostDate>{date}</PostDate>
             </PostDetails>
         </PostView>
