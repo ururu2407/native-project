@@ -1,9 +1,12 @@
 import React from 'react';
-import { HomeScreen } from './screens/Home';
-import { StatusBar, View } from 'react-native';
-import { FullPostScreen } from './screens/FullPost';
 import { Navigation } from './screens/Navigation';
-
+import {StatusBar} from 'react-native';
 export default function App() {
-    return <Navigation/>
+    return (
+        <>
+            <Navigation />
+            <StatusBar style="auto" />
+        </>
+
+    )
 }
